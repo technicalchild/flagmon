@@ -41,4 +41,4 @@ if __name__ == '__main__':
     load_special_users()
     while True:
         fetch_flag()
-        time.sleep(0.2)
+        time.sleep(1)
