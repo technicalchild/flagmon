@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<h3><a href="/">Home</a> &raquo; {{title}}:</h3>
+{% for flag in flags %}
+<div class="inlineblock centertext bottombuffer">
+  <img title="Flag #{{flag.flagid}} by &quot;{{flag.username}}&quot; proudly whipped the llama's ass on {{flag.created}}" src="http://fi.somethingawful.com/flags{{flag.path}}?by={{flag.username}}">
+  <br>
+  <audio controls><source src="/audio/{{flag.flagid}}" type="audio/mpeg"></audio>
+</div>
+{% endfor %}
+{% endblock %}

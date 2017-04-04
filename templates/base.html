@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+  <style>
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .centertext {
+    text-align: center;
+  }
+  .clear {
+    clear: both;
+  }
+  .inline {
+    display: inline;
+  }
+  .inlineblock {
+    display: inline-block;
+  }
+  .bottombuffer {
+    margin-bottom: 10px;
+  }
+  </style>
+</head>
+<body>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div id="footer">{% include 'footer.html' %}</div>
+</body>
+</html>

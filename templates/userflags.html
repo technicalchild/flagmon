@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Flags by {{flags[0].username}}{% endblock %}
+{% block content %}
+<h3><a href="/">Home</a> &raquo; Flags by {{flags[0].username}}:</h3>
+{% include 'pages.html' %}
+{% for flag in flags %}
+<img title="Flag #{{flag.flagid}} proudly brought to you by &quot;{{flag.username}}&quot; on {{flag.created}}" src="http://fi.somethingawful.com/flags{{flag.path}}?by={{flag.username}}">
+{% endfor %}
+{% include 'pages.html' %}
+{% endblock %}

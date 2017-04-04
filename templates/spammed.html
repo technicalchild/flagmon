@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<h3><a href="/">Home</a> &raquo; {{title}}:</h3>
+{% for flag in flags %}
+<div class="inlineblock centertext bottombuffer">
+  <img title="This flag faggotedly spammed to you by &quot;{{flag.username}}&quot; {{flag.count}} times" src="http://fi.somethingawful.com/flags{{flag.path}}?by={{flag.username}}">
+  <br>
+  <span>Spammed {{flag.count}} times</span>
+</div>
+{% endfor %}
+{% endblock %}

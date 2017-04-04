@@ -1,0 +1,9 @@
+{% if pages > 1 %}
+<br>
+Pages:
+{% for n in range(pages) %}
+<a href="/user/{{userid}}/{{n+1}}">{{n+1}}</a>
+{% endfor %}
+<a href="/user/{{userid}}/all">All</a>
+<br>
+{% endif %}
