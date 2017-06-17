@@ -32,17 +32,7 @@ def steal_flags():
 
     for userid, count in local_counts.items():
         if fetched_counts[userid] > count:
-            response = requests.get('https://jims.bike/api/user/' + str(userid))
-            if not response.ok: continue
-            items = response.json()
-            for item in items:
-                flagid = int(item['path'].split('.')[0].split('/')[-1])
-                if not session.query(exists().where(Flag.flagid==flagid)).scalar():
-                    process_flag_json({
-                        "path": item['path'], 
-                        "created": parse(item['created']).strftime("%m/%d/%Y"),
-                        "username": item['userName']
-                    })
+            print("im gay")
 
 if __name__ == '__main__':
     from special import load_special_users
